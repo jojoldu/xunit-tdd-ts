@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get branch names
+        id: branch-name
+        uses: tj-actions/branch-names@v4.9
+
+      - name: Current branch name
+        run: echo "${{ steps.branch-name.outputs.current_branch }}"
