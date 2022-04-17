@@ -1,4 +1,4 @@
-name: Generate Tag
+name: echo branch
 on:
   push:
     branches:
