@@ -14,7 +14,7 @@ jobs:
         uses: tj-actions/branch-names@v4.9
 
       - name: 버전 정보 추출(from Branch Name)
-        run: echo "${{ steps.branch-name.outputs.current_branch }} | egrep -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
+        run: echo "$(echo '${{ steps.branch-name.outputs.current_branch }}' | egrep -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
         id: extract_version_name
 
       - name: Release & Tag 생성
