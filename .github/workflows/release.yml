@@ -24,7 +24,7 @@ jobs:
         with:
           tag_name: ${{ env.TAG }}
           release_name: ${{ env.TAG }}
-      - name: delete branch
-        uses: SvanBoxel/delete-merged-branch@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: delete branch
+#        uses: SvanBoxel/delete-merged-branch@main
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
