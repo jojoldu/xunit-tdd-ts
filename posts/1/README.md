@@ -32,4 +32,18 @@ yarn add prettier eslint eslint-config-prettier eslint-plugin-prettier @typescri
 * 수집된 결과를 출력하기
 
 
-* [Run Configuration for TypeScript](https://plugins.jetbrains.com/plugin/10841-run-configuration-for-typescript/)
+
+
+## 1. WasRun
+
+```ts
+function xunitRun() {
+  const wasRun = new WasRun();
+  console.log(wasRun.wasRun); // false여야함
+  wasRun.testMethod();
+  console.log(wasRun.wasRun); // true여야함
+}
+
+xunitRun();
+```
+

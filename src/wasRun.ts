@@ -1,8 +1,8 @@
 export class WasRun {
-  private _wasRun: boolean;
+  private _wasRun = false;
 
   testMethod() {
-
+    this._wasRun = true;
   }
 
   get wasRun(): boolean {
