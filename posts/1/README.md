@@ -17,6 +17,19 @@ git init
 ```
 
 ```bash
-yarn add prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser --dev
+yarn add prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser ts-node --dev
 ```
 
+
+## 0. 테스트 프레임워크 Todo
+
+테스트 프레임워크의 테스트 메소드가 할 일은 다음과 같다.
+
+* 먼저 `setup` 호출하기
+* 테스트 메소드가 끝나고 난뒤 `tearDown` 호출하기
+* 테스트 메소드가 실패하더라도 `tearDown` 호출하기
+* 여러개의 테스트 메소드 실행하기
+* 수집된 결과를 출력하기
+
+
+* [Run Configuration for TypeScript](https://plugins.jetbrains.com/plugin/10841-run-configuration-for-typescript/)

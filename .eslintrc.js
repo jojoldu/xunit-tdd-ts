@@ -46,7 +46,6 @@ module.exports = {
         },
       },
     ],
-    'no-console': 'error',
     'curly': 1,
     'arrow-body-style': ['error', 'as-needed'],
     'eqeqeq': ['error', 'always'],
