@@ -47,3 +47,7 @@ function xunitRun() {
 xunitRun();
 ```
 
+
+## 2. assert
+
+이 과정은 **Jest를 만드는 과정이 아니다**.
