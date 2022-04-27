@@ -2,7 +2,7 @@ import { TestCase } from './TestCase';
 import { WasRun } from './WasRun';
 import { assertEquals } from './assert';
 
-export class TestCaseTest extends TestCase{
+export class TestCaseTest extends TestCase {
 
   constructor(testMethod: string) {
     super(testMethod);
@@ -13,5 +13,12 @@ export class TestCaseTest extends TestCase{
     assertEquals(false, wasRun.wasRun);
     wasRun.run();
     assertEquals(true, wasRun.wasRun);
+  }
+
+  testSetup(): void {
+    const wasRun = new WasRun('testMethod');
+    assertEquals(false, wasRun.wasSetup);
+    wasRun.run();
+    assertEquals(true, wasRun.wasSetup);
   }
 }
