@@ -1,4 +1,4 @@
-import { WasRun } from './wasRun';
+import { WasRun } from './WasRun';
 
 function xunitRun() {
   const wasRun = new WasRun('testMethod');

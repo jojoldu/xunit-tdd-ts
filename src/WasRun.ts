@@ -1,9 +1,10 @@
-export class WasRun {
+import { TestCase } from './TestCase';
+
+export class WasRun extends TestCase {
   private _wasRun = false;
-  private _name: string;
 
   constructor(testMethod: string) {
-    this._name = testMethod;
+    super(testMethod);
   }
 
   testMethod() {
@@ -12,10 +13,5 @@ export class WasRun {
 
   get wasRun(): boolean {
     return this._wasRun;
-  }
-
-  run() {
-    // @ts-ignore
-    this[this._name](); // 지정된 테스트 메소드 실행
   }
 }
