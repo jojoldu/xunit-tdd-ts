@@ -1,10 +1,7 @@
-import { WasRun } from './WasRun';
+import { TestCaseTest } from './TestCaseTest';
 
-function xunitRun() {
-  const wasRun = new WasRun('testMethod');
-  console.log(wasRun.wasRun); // false여야함
-  wasRun.run();
-  console.log(wasRun.wasRun); // true여야함
+function main() {
+  new TestCaseTest('testRunning').run();
 }
 
-xunitRun();
+main();
