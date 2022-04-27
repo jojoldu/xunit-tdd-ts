@@ -1,5 +1,6 @@
 import { TestCase } from './TestCase';
 import { WasRun } from './WasRun';
+import { assertEquals } from './assert';
 
 export class TestCaseTest extends TestCase{
 
@@ -9,8 +10,8 @@ export class TestCaseTest extends TestCase{
 
   testRunning(): void {
     const wasRun = new WasRun('testMethod');
-    console.log(wasRun.wasRun); // false여야함
+    assertEquals(false, wasRun.wasRun);
     wasRun.run();
-    console.log(wasRun.wasRun); // true여야함
+    assertEquals(true, wasRun.wasRun);
   }
 }
