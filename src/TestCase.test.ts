@@ -8,17 +8,21 @@ export class TestCaseTest extends TestCase {
     super(testMethod);
   }
 
+  private wasRun: WasRun;
+
+  override setUp() {
+    this.wasRun = new WasRun('testMethod');
+  }
+
   testRunning(): void {
-    const wasRun = new WasRun('testMethod');
-    assertEquals(false, wasRun.wasRun);
-    wasRun.run();
-    assertEquals(true, wasRun.wasRun);
+    assertEquals(false, this.wasRun.wasRun);
+    this.wasRun.run();
+    assertEquals(true, this.wasRun.wasRun);
   }
 
   testSetup(): void {
-    const wasRun = new WasRun('testMethod');
-    assertEquals(false, wasRun.wasSetup);
-    wasRun.run();
-    assertEquals(true, wasRun.wasSetup);
+    assertEquals(false, this.wasRun.wasSetup);
+    this.wasRun.run();
+    assertEquals(true, this.wasRun.wasSetup);
   }
 }
