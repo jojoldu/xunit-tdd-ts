@@ -9,9 +9,15 @@ export class TestCase {
     this.setUp();
     // @ts-ignore
     this[this._name](); // 지정된 테스트 메소드 실행
+
+    this.tearDown();
   }
 
   setUp(): void {
+
+  }
+
+  tearDown(): void {
 
   }
 
